@@ -126,20 +126,32 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: 'Sport Store', icon: '👟', desc: 'Loja de artigos esportivos com catálogo completo' },
-              { name: 'Loja de Moda Urbana', icon: '👕', desc: 'Vitrine elegante para roupas e acessórios' },
-              { name: 'Clínica Bem-Estar', icon: '💆', desc: 'Agendamentos e serviços de saúde' },
-            ].map((model, idx) => (
-              <div key={idx} className="group bg-card border border-secondary rounded-2xl p-8 hover:border-accent transition-all duration-300 hover:shadow-lg hover:shadow-accent/20">
-                <div className="text-5xl mb-4">{model.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{model.name}</h3>
-                <p className="text-muted-foreground mb-6">{model.desc}</p>
-                <button className="text-accent font-semibold hover:text-white transition-colors">
-                  Ver Exemplo →
-                </button>
-              </div>
-            ))}
+            <a href="https://ricardoamorim77.github.io/sport-store/" target="_blank" rel="noopener noreferrer" className="group bg-card border border-secondary rounded-2xl p-8 hover:border-accent transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 block">
+              <div className="text-5xl mb-4">👟</div>
+              <h3 className="text-xl font-bold mb-2">Sport Store</h3>
+              <p className="text-muted-foreground mb-6">Loja de artigos esportivos com catálogo completo</p>
+              <span className="text-accent font-semibold hover:text-white transition-colors">
+                Ver Exemplo →
+              </span>
+            </a>
+
+            <a href="https://ricardoamorim77.github.io/loja-moda-urbana/" target="_blank" rel="noopener noreferrer" className="group bg-card border border-secondary rounded-2xl p-8 hover:border-accent transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 block">
+              <div className="text-5xl mb-4">👕</div>
+              <h3 className="text-xl font-bold mb-2">Loja de Moda Urbana</h3>
+              <p className="text-muted-foreground mb-6">Vitrine elegante para roupas e acessórios</p>
+              <span className="text-accent font-semibold hover:text-white transition-colors">
+                Ver Exemplo →
+              </span>
+            </a>
+
+            <a href="https://ricardoamorim77.github.io/clinica-bem-estar/" target="_blank" rel="noopener noreferrer" className="group bg-card border border-secondary rounded-2xl p-8 hover:border-accent transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 block">
+              <div className="text-5xl mb-4">💆</div>
+              <h3 className="text-xl font-bold mb-2">Clínica Bem-Estar</h3>
+              <p className="text-muted-foreground mb-6">Agendamentos e serviços de saúde</p>
+              <span className="text-accent font-semibold hover:text-white transition-colors">
+                Ver Exemplo →
+              </span>
+            </a>
           </div>
         </div>
       </section>
@@ -243,122 +255,110 @@ export default function Home() {
 
               <div className="space-y-4">
                 {[
-                  { icon: <MessageSquare className="text-accent" size={24} />, title: 'Respostas Automáticas', desc: 'IA responde perguntas frequentes em segundos' },
-                  { icon: <Smartphone className="text-accent" size={24} />, title: 'Integração WhatsApp', desc: 'Atende direto no WhatsApp do seu cliente' },
-                  { icon: <Zap className="text-accent" size={24} />, title: 'Agendamentos 24h', desc: 'Marca reuniões e orçamentos automaticamente' },
+                  { icon: <MessageSquare className="text-accent" size={24} />, title: 'Respostas Automáticas', desc: 'Responde mensagens 24/7 sem você fazer nada' },
+                  { icon: <ShoppingCart className="text-accent" size={24} />, title: 'Aumento de Vendas', desc: 'Nunca perde uma oportunidade de venda' },
+                  { icon: <Smartphone className="text-accent" size={24} />, title: 'Agendamentos', desc: 'Agenda orçamentos e consultas automaticamente' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-4">
                     <div className="flex-shrink-0">{item.icon}</div>
                     <div>
                       <h4 className="font-bold mb-1">{item.title}</h4>
-                      <p className="text-muted-foreground">{item.desc}</p>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative h-96 hidden lg:flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-blue-500/20 rounded-3xl"></div>
-              <div className="relative z-10 text-center">
-                <div className="text-8xl font-bold text-accent/30">🤖</div>
-                <p className="text-accent text-lg font-bold mt-4">IA Inteligente</p>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-accent/20 to-blue-500/20 rounded-3xl p-8 text-center">
+                <div className="text-6xl mb-4">🤖</div>
+                <p className="text-accent text-lg font-bold">IA Inteligente</p>
+                <p className="text-muted-foreground mt-2">Funciona 24 horas por dia</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Order Form Section */}
+      {/* Contact Form Section */}
       <section id="form" className="py-20">
         <div className="container max-w-2xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              Solicite seu <span className="text-accent">Orçamento</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+              Pronto para <span className="text-accent">Crescer?</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Preencha o formulário abaixo e receba uma proposta personalizada no seu WhatsApp
+              Preencha o formulário abaixo e receba seu orçamento gratuito em 24 horas
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-secondary rounded-2xl p-8">
-            {/* Company Name */}
+          <form onSubmit={handleSubmit} className="bg-card border border-secondary rounded-2xl p-8 space-y-6">
             <div>
-              <label className="block text-sm font-semibold mb-2">Nome da Empresa *</label>
+              <label className="block text-sm font-semibold mb-2">Nome da Empresa</label>
               <Input
                 type="text"
                 name="companyName"
                 value={formData.companyName}
                 onChange={handleFormChange}
-                placeholder="Ex: Oficina Silva"
+                placeholder="Sua empresa"
                 required
-                className="bg-secondary/50 border-secondary focus:border-accent"
               />
             </div>
 
-            {/* Site Type */}
             <div>
-              <label className="block text-sm font-semibold mb-2">Tipo de Site Desejado *</label>
+              <label className="block text-sm font-semibold mb-2">Tipo de Site Desejado</label>
               <Select value={formData.siteType} onValueChange={handleSelectChange}>
-                <SelectTrigger className="bg-secondary/50 border-secondary focus:border-accent">
-                  <SelectValue placeholder="Selecione um tipo de site" />
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecione um tipo" />
                 </SelectTrigger>
-                <SelectContent className="bg-card border-secondary">
-                  <SelectItem value="landing">Landing Page Express</SelectItem>
-                  <SelectItem value="institucional">Site Institucional Completo</SelectItem>
-                  <SelectItem value="vitrine">Catálogo de Vendas (Vitrine)</SelectItem>
+                <SelectContent>
+                  <SelectItem value="Landing Page Express">Landing Page Express</SelectItem>
+                  <SelectItem value="Site Institucional">Site Institucional</SelectItem>
+                  <SelectItem value="Catálogo de Vendas">Catálogo de Vendas</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            {/* AI Assistant */}
-            <div className="flex items-center gap-3 bg-accent/10 border border-accent rounded-lg p-4">
+            <div className="flex items-center gap-3">
               <input
                 type="checkbox"
                 id="wantsAI"
                 name="wantsAI"
                 checked={formData.wantsAI}
                 onChange={handleFormChange}
-                className="w-5 h-5 cursor-pointer accent-accent"
+                className="w-5 h-5 rounded border-secondary"
               />
-              <label htmlFor="wantsAI" className="cursor-pointer flex-1">
-                <span className="font-semibold">Deseja Assistente de IA? (+R$ 250)</span>
-                <p className="text-sm text-muted-foreground">Atendimento automático 24h/dia</p>
+              <label htmlFor="wantsAI" className="text-sm font-semibold">
+                Desejo adicionar Assistente de IA (+R$ 250)
               </label>
             </div>
 
-            {/* Site Vision */}
             <div>
               <label className="block text-sm font-semibold mb-2">Como você imagina seu site?</label>
               <Textarea
                 name="siteVision"
                 value={formData.siteVision}
                 onChange={handleFormChange}
-                placeholder="Descreva sua visão para o site..."
-                className="bg-secondary/50 border-secondary focus:border-accent min-h-24 resize-none"
+                placeholder="Descreva sua visão..."
+                rows={4}
               />
             </div>
 
-            {/* Requirements */}
             <div>
               <label className="block text-sm font-semibold mb-2">O que não pode faltar?</label>
               <Textarea
                 name="requirements"
                 value={formData.requirements}
                 onChange={handleFormChange}
-                placeholder="Ex: Catálogo de produtos, integração com Instagram, etc..."
-                className="bg-secondary/50 border-secondary focus:border-accent min-h-24 resize-none"
+                placeholder="Requisitos especiais..."
+                rows={4}
               />
             </div>
 
-            {/* Submit Button */}
             <button type="submit" className="cta-button w-full">
               Enviar Orçamento via WhatsApp
             </button>
-
-            <p className="text-center text-sm text-muted-foreground">
-              Responderemos em até 2 horas úteis
-            </p>
           </form>
         </div>
       </section>
@@ -368,41 +368,28 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4 text-accent">Ricardo Amorim</h3>
-              <p className="text-muted-foreground">Web & IA para pequenas empresas</p>
+              <h3 className="font-bold text-lg mb-4">Ricardo Amorim</h3>
+              <p className="text-muted-foreground">Web & IA - Transformando negócios com tecnologia</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Contato</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>
-                  <a href="https://wa.me/5562994613564" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                    WhatsApp: (62) 99461-3564
-                  </a>
-                </li>
-                <li>
-                  <a href="https://instagram.com/ricardo_amorim7" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                    Instagram: @ricardo_amorim7
-                  </a>
-                </li>
-              </ul>
+              <h4 className="font-bold mb-4">Contato</h4>
+              <a href="https://wa.me/5562994613564" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors block mb-2">
+                WhatsApp: (62) 99461-3564
+              </a>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Links Rápidos</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><a href="#services" className="hover:text-accent transition-colors">Serviços</a></li>
-                <li><a href="#form" className="hover:text-accent transition-colors">Orçamento</a></li>
-              </ul>
+              <h4 className="font-bold mb-4">Redes Sociais</h4>
+              <a href="https://instagram.com/ricardo_amorim7" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors block">
+                Instagram: @ricardo_amorim7
+              </a>
             </div>
           </div>
-
           <div className="border-t border-secondary pt-8 text-center text-muted-foreground">
-            <p>&copy; 2026 Ricardo Amorim - Web & IA. Todos os direitos reservados.</p>
-            <p className="text-sm mt-2">Otimizado para conversão e SEO</p>
+            <p>&copy; 2026 Ricardo Amorim. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
 
-      {/* WhatsApp Floating Button */}
       <WhatsAppButton />
     </div>
   );
